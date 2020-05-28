@@ -4,3 +4,4 @@ account_id = "86c2e234071b66b22c790f282bc19fad"
 workers_dev = true
 route = "almogtama3.com/cloudflare"
 zone_id = "0d46db4336edce11c3891714cbfcf7c3"
+environment="development"
