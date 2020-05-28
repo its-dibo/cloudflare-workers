@@ -14,11 +14,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Deploy to CloudFlare workers
         uses: cloudflare/wrangler-action@1.1.0
-        env:
-          apiKey: 5b27b4cafa9834e18d7f83c4a8788ba161d14
-          email: sh.eldeeb.2010@gmail.com
-          #CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          #CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
-          #CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
-          #CLOUDFLARE_AUTH_EMAIL: sh.eldeeb.2010@gmail.com
-          #CLOUDFLARE_SCRIPT_NAME: index
+        with:
+          apiKey: "5b27b4cafa9834e18d7f83c4a8788ba161d14"
+          email: "sh.eldeeb.2010@gmail.com"
+          environment: "development"
+        #env:
+        #CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        #CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+        #CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        #CLOUDFLARE_AUTH_EMAIL: sh.eldeeb.2010@gmail.com
+        #CLOUDFLARE_SCRIPT_NAME: index
