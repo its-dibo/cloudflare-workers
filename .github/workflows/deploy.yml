@@ -1,0 +1,16 @@
+name: CloudFlare workers
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  start:
+    name: build & deploy
+    runs-on: ubuntu-latest
+    steps:
+      #we use checkout because we want to use the repo (to install dependencies)
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Deploy to CloudFlare workers
+        uses: cloudflare/serverless-action@v1.1
